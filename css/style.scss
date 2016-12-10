@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'syntax.scss';
+
 a {
 	text-decoration: none;
 	color: green;
@@ -19,6 +21,8 @@ body {
 	margin: 0px;
 	padding: 0px;
 	color: #333;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .share_sidebar {
@@ -36,6 +40,7 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 	z-index: 999;
 }
+
 
 .appbar__logo {
 	font-family: 'Bilbo', cursive;
@@ -133,6 +138,8 @@ body {
 .article__text {
 	font-size: 20px;
 	line-height: 1.5;
+	word-wrap: break-word;
+	width: 100%;
 }
 
 .footer {
@@ -284,4 +291,26 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
 }
+pre, code {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+code {
+	padding:1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+

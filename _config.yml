@@ -25,8 +25,13 @@ facebook_username: arush0311
 linkedin_username: arush-goyal-2658b4a3
 
 # Build settings
-highlighter: rouge
 markdown: kramdown
+
+# Syntax highlighting
+highlighter: rouge
+kramdown:
+    input: GFM 
+    syntax_highlighter: rouge
 
 gems:
   - jekyll-feed
