@@ -18,7 +18,7 @@ author: Arush Goyal
 email: arushgyl@gmail.com
 description: A collection of Short software development stories
 baseurl: "/blog"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://arush0311.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: goyal_arush
 github_username:  arush0311
 facebook_username: arush0311
