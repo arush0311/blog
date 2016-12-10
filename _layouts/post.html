@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	{% include appbar.html %}
+
+	<div class="article_content">
+		<div class="article__header">
+			{{ page.title }}
+		</div>
+		<div class="article__date">
+			on {{ page.date | date_to_long_string }}
+		</div>
+		<div class="wrapper">
+			<div class="article__text">
+				{{ content }}
+			</div>
+			<div class="share_sidebar">
+				Share This Article
+				<div class="social-wrapper">
+					{% include facebook-share.html %}
+				</div>
+				<div class="social-wrapper">
+					{% include twitter-share.html %}
+				</div>
+				<div class="social-wrapper">
+					{% include googleplus-share.html %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="social-wrapper">
+		{% include facebook-share.html %}
+		{% include twitter-share.html %}
+		{% include googleplus-share.html %}
+
+	</div>
+	{% include footer.html %}
+</body>
+</html>

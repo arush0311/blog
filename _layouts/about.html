@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	{% include appbar.html %}
+
+	<div class="author">
+		{{ site.author }}
+	</div>
+
+	<div class="about">
+		<div class="about__image">
+			<img src="{{ site.baseurl }}/images/me.jpg">
+		</div>
+		<div class="about__description">
+			{{ content }}
+		</div>
+		{% include contact.html %}
+	</div>
+	<div>
+	</div>
+	{% include footer.html %}
+</body>
+</html>
