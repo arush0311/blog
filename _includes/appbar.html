@@ -1,17 +1,22 @@
 <div class="appbar">
-	<a class="link-reset" href={{site.baseurl}}/>
-		<div class="appbar__logo">
+	<a class="link--reset" href={{site.baseurl}}/>
+		<div class="logo">
 			{{ site.title }}
 		</div>
 	</a>
-	<ul class="appbar__menu">
-		<a class="link-reset" href="{{site.baseurl}}/about.html">
-			<li class="appbar__menu__item appbar__menu__item-hover">
+	<ul class="nav">
+		<a class="link--reset" href="{{ '/categories/' | relative_url }}">
+			<li class="nav__item button">
+				Categories
+			</li>
+		</a>
+		<a class="link--reset" href="{{'/about/' | relative_url }}">
+			<li class="nav__item button">
 				About me
 			</li>
 		</a>
 		<a>
-			<li class="appbar__menu__item button button-blue">
+			<li class="nav__item button button--blue">
 				Subscribe
 			</li>
 		</a>

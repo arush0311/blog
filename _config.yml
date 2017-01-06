@@ -13,6 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
 title: MyBlog
 author_name: Arush Goyal
 author_email: arushgyl@gmail.com
@@ -23,6 +24,8 @@ twitter_username: goyal_arush
 github_username:  arush0311
 facebook_username: arush0311
 linkedin_username: arush-goyal-2658b4a3
+
+permalink: /:categories/:slug/
 
 # Build settings
 markdown: kramdown

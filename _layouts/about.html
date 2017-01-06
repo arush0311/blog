@@ -4,23 +4,19 @@
 	{% include head.html %}
 </head>
 <body>
-	{% include appbar.html %}
+    <div class="container">
+		{% include appbar.html %}
 
-	<div class="author">
-		{{ site.author }}
-	</div>
-
-	<div class="about">
-		<div class="about__image">
-			<img src="{{ site.baseurl }}/images/me.jpg">
+		<div class="author">
+			<div class="author__image">
+				<img src="{{'/images/me.jpg' | relative_url}}">
+			</div>
+			<div class="author__description">
+				{{ content }}
+			</div>
+			{% include contact.html %}
 		</div>
-		<div class="about__description">
-			{{ content }}
-		</div>
-		{% include contact.html %}
+		{% include footer.html %}
 	</div>
-	<div>
-	</div>
-	{% include footer.html %}
 </body>
 </html>

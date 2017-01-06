@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body>
+    <div class="container">
+        {% include appbar.html %}
+        
+        <div class="offset">
+        </div>
+        <div class="tag_list">
+            {% for category in site.categories %}
+                    <a class="link--reset tag"
+                    href="#{{ category | first | slugify }}">
+                        {{ category | first }}
+                    </a>
+            {% endfor %}
+        </div>
+        <div class = "post_list">
+            {% for category in site.categories %}
+                <div class="category_list" id="{{ category | first | slugify }}">
+                    <h2>
+                        {{ category | first | upcase}}
+                    </h2>
+                    {% for post in category[1] %}
+                        <a class="link--reset post"
+                        href="{{ post.url | relative_url}}">
+                            <div class = "post__header">
+                                {{ post.title }}
+                            </div>
+                            <div class = "post__date">
+                                On {{ post.date | date_to_long_string}}
+                            </div>
+                            <div class = "post__body">
+                                {{ post.excerpt }}
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        {% include footer.html %}
+    </div>
+</body>
+</body>
+</html>
