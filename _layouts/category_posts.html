@@ -19,7 +19,7 @@
         </div>
         <div class = "post_list">
             {% for category in site.categories %}
-                <div class="category_list" id="{{ category | first | slugify }}">
+                <div class="category_list seek" id="{{ category | first | slugify }}">
                     <h2>
                         {{ category | first | upcase}}
                     </h2>

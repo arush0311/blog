@@ -1,0 +1,21 @@
+---
+layout: null
+---
+
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+  <title>{{ site.title }}</title>
+  <link>{{"/" | absolute_url }}</link>
+  <description>{{ site.description }}</description>
+  {% for post in site.posts %}
+    <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post.url | absolute_url }}</link>
+        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        <description>{{ post.content | xml_escape }}</description>
+        <guid isPermaLink='true'>{{ post.url | absolute_url }}</guid>
+    </item>
+  {% endfor %}
+</channel>
+</rss> 

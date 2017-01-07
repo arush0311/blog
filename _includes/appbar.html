@@ -1,5 +1,5 @@
 <div class="appbar">
-	<a class="link--reset" href={{site.baseurl}}/>
+	<a class="link--reset" href="{{'/' | relative_url }}"/>
 		<div class="logo">
 			{{ site.title }}
 		</div>
@@ -15,7 +15,7 @@
 				About me
 			</li>
 		</a>
-		<a>
+		<a class="link--reset" href="{{'/feed.xml' | relative_url }}">
 			<li class="nav__item button button--blue">
 				Subscribe
 			</li>

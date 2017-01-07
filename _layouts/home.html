@@ -14,7 +14,9 @@
 				<div class="blog_description">
 					{{ site.description }}
 				</div>
-				<button class="button button--hollow button--large">Subscribe</button>
+				<a class="button button--hollow button--large link--reset" href='{{"/feed.xml" | relative_url}}'>
+					Subscribe via RSS
+				</a>
 			</div>
 		</div>
 		<div class = "post_list">
