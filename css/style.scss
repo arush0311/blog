@@ -252,7 +252,7 @@ figure {
 .share_container {
 	margin: 30px 10px;
 	text-align: center;
-	width: 200px;
+	min-width: 200px;
 	.social_icon {
 		display: block;
 		margin:5px auto 5px auto;

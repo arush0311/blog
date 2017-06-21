@@ -21,20 +21,24 @@
 		</div>
 		<div class = "post_list">
 			{% for post in site.posts %}
-				<a class="link--reset post" href="{{ post.url | relative_url}}">
-					<div class = "post__header">
-						{{ post.title }}
+				<a class="link--reset" href="{{ post.url | relative_url}}">
+					<div class="post">
+						<div>
+							<div class = "post__header">
+								{{ post.title }}
+							</div>
+							<div class = "post__date">
+								On {{ post.date | date_to_long_string}}
+							</div>
+							<div class = "post__body">
+								{{ post.excerpt }}
+							</div>
+						</div>
+						<a class="link--reset tag"
+						href="{{ post.category | slugify | prepend: '/categories/#' | relative_url}}">
+							{{ post.category }}
+						</a>
 					</div>
-					<div class = "post__date">
-						On {{ post.date | date_to_long_string}}
-					</div>
-					<div class = "post__body">
-						{{ post.excerpt }}
-					</div>
-					<a class="link--reset tag"
-					href="{{ post.category | slugify | prepend: '/categories/#' | relative_url}}">
-						{{ post.category }}
-					</a>
 				</a>
 			{% endfor %}
 		</div>

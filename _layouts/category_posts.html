@@ -24,16 +24,18 @@
                         {{ category | first | upcase}}
                     </h2>
                     {% for post in category[1] %}
-                        <a class="link--reset post"
+                        <a class="link--reset"
                         href="{{ post.url | relative_url}}">
-                            <div class = "post__header">
-                                {{ post.title }}
-                            </div>
-                            <div class = "post__date">
-                                On {{ post.date | date_to_long_string}}
-                            </div>
-                            <div class = "post__body">
-                                {{ post.excerpt }}
+                            <div class="post">
+                                <div class = "post__header">
+                                    {{ post.title }}
+                                </div>
+                                <div class = "post__date">
+                                    On {{ post.date | date_to_long_string}}
+                                </div>
+                                <div class = "post__body">
+                                    {{ post.excerpt }}
+                                </div>
                             </div>
                         </a>
                     {% endfor %}
