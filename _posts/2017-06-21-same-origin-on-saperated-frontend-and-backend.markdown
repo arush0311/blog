@@ -35,7 +35,7 @@ Use a proxy server
 ------------------
 Setup something like a proxy-server which would route requests based on its request path. For example, `/api/*` requests would be routed to api-server and everything else to frontend server. One disadvantage was the proxy-server code would be saperate from frontend and backend and routing information would be split across three codebases.
 
-So we integrated the the proxy-server code with our frontend code using [http-proxy-middleware]. Now all the requests would be directed to frontend-server and if its an `/api/` request it would be proxied to api server.
+So we integrated the the proxy-server code with our frontend code using [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware). Now all the requests would be directed to frontend-server and if its an `/api/` request it would be proxied to api server.
 
 This approach was not perfect and still left something to be desired namely:
 
